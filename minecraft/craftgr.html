@@ -6,29 +6,37 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="content-language" content="ja">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>その他の作成物・配布物</title>
+    <title>CraftGR</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
 
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 
 <link rel="stylesheet" href="../css/style.css">
 
 <body>
-    <div class="center">
-        <h1>その他の作成物・配布物</h1>
-        かなり前に作ったツール等です<br>
-        古いツールなのでサポートはできかねますのでご了承ください
+    <div id="topbar"></div>
+    <div class="main">
+        <h1>CraftGR</h1>
+        <span>ゲーム内で「<a href="https://gensokyoradio.net/">Gensokyo Radio</a>」の音楽を再生するmodです</span>
         <br>
+        <img src="img/craftgr.jpg", style="width:38%">
+        <h3>注意</h3>
+        <span>Forge版を導入する際は、別途 <a href="https://www.curseforge.com/minecraft/mc-mods/cloth-config-forge">Cloth Config API</a> が必要になります。</span>
         <br>
         <h4>
-            <a href="https://www.dropbox.com/s/9zpyy7tjihzedig/RemoteTalkEX%20v1.3.2.zip?dl=1", target="_blank">RemoteTalkEX (v1.3.2)</a><br>
-            <a href="https://github.com/KabanFriends/creation/raw/master/simplekeysound/SimpleKeySound-V1.1.2.zip", target="_blank">SimpleKeySound (v.1.1.2)</a><br>
-            <a href="https://www.dropbox.com/s/vnqgbvbx9irncx2/ATSUMORI%20v1.35.zip?dl=1", target="_blank">ATSUMORI (v1.35)</a>
+            <a href="https://modrinth.com/mod/craftgr">Modrinth</a>&nbsp;&nbsp;
         </h4>
-        <br>
     </div>
+
+    <script>
+        $.get("topbar.html", function(data){
+            $("#topbar").replaceWith(data);
+        });
+    </script>
 </body>
