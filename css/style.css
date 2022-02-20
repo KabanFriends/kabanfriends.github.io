@@ -2,11 +2,14 @@ html body {
     margin: 0;
     height: 100%;
     overflow: hidden;
+
+    font-size: 18px;
+    font-weight: 300;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 .topcenter {
     text-align: center;
-    font-family: 'Noto Sans JP', sans-serif;
 }
 
 .center {
@@ -16,8 +19,6 @@ html body {
     align-items: center;
     text-align: center;
     min-height: 100vh;
-
-    font-family: 'Noto Sans JP', sans-serif;
 }
 
 .main {
@@ -27,6 +28,52 @@ html body {
     align-items: center;
     text-align: center;
     min-height: 50vh;
+}
 
-    font-family: 'Noto Sans JP', sans-serif;
+h1 {
+    display: inline;
+    font-weight: 500;
+    font-size: 48px;
+}
+
+h2 {
+    display: inline;
+    font-weight: 500;
+    font-size: 32px;
+}
+
+h3 {
+    display: inline;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+h4 {
+    display: inline;
+    font-weight: 300;
+    font-size: 24px;
+}
+
+/*pc*/
+@media screen and (min-width: 600px) {
+    .mobile { display: none; }
+
+    hr {
+        width:50%
+    }
+}
+
+/*mobile*/
+@media screen and (max-width: 600px) {
+    .no-mobile { display: none; }
+
+    hr {
+        width:80%
+    }
+}
+
+@media screen and (max-height: 400px) {
+    html body {
+        overflow: visible;
+    }
 }
