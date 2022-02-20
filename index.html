@@ -1,0 +1,46 @@
+</script><head>
+    <meta charset="UTF-8">
+    <meta name="description" content="KabanFriendsのウェブサイト (3代目)">
+    <meta name="keywords" content="KabanFriends">
+    <meta name="author" content="KabanFriends">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="content-language" content="ja">
+    <title>KabanFriends</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500&display=swap" rel="stylesheet">
+</head>
+
+<link rel="stylesheet" href="css/style.css">
+
+<body>
+    <script>
+        function copyDiscord() {
+            navigator.clipboard.writeText("KabanFriends#7721");
+            copied = document.getElementById("discord");
+            console.log(copied)
+            copied.innerHTML = " (コピーしました)";
+        }
+    </script>
+    <div class="center">
+        <img src="img/kabanfriends.png">
+        <font size="10", style="font-weight:500">
+            KabanFriends
+        </font>
+        <br>
+        <br>
+        <font size="5", style="font-weight:300">
+            <a href="uselessbot.html">UselessBot</a><br>
+            <a href="minecraft/inventory_dark.html">Minecraft</a><br>
+            <a href="misc.html">その他</a>
+        </font>
+        <br>
+        <br>
+        <hr style="width:30%"> 
+        <font size="3", style="font-weight:300">
+            Discord: <a href="javascript:copyDiscord()">KabanFriends#7721</a><span id="discord"></span><br>
+            GitHub: <a href="https://github.com/KabanFriends">KabanFriends</a><br>
+        </font>
+    </div>
+</body>
