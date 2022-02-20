@@ -72,7 +72,7 @@ h4 {
     }
 }
 
-@media screen and (max-height: 400px) {
+@media screen and (max-height: 600px) {
     html body {
         overflow: visible;
     }
