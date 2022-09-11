@@ -28,29 +28,29 @@
         <div style="position: fixed; right:10px; top:10px; background-color:lightgray; opacity: 50;z-index:10;font-family: 'Courier New',monospace;">
             <div style="margin: 10px;">
                 <div>
-                    <label for="skinInput">File</label>
+                    <label for="skinInput">スキン</label>
                     <input type="file" id="skinInput">
                 </div>
                 <div>
-                    <label for="capeInput">Cape</label>
-                    <input type="file" id="capeInput">
+                    <label for="capeInput">マント</label>
+                    <input type="url" id="capeInput" placeholder="URL" value="">
                 </div>
             </div>
             <div style="margin: 10px;">
-                <span><input type="checkbox" class="partToggle" id="hat" checked><label for="hat">Hat</label></span>
-                <span><input type="checkbox" class="partToggle" id="jacket" checked><label for="jacket">Jacket</label></span>
+                <span><input type="checkbox" class="partToggle" id="hat" checked><label for="hat">帽子</label></span>
+                <span><input type="checkbox" class="partToggle" id="jacket" checked><label for="jacket">上着</label></span>
                 <br/>
-                <span><input type="checkbox" class="partToggle" id="leftSleeve" checked><label for="leftSleeve">Left Sleeve</label></span>
-                <span><input type="checkbox" class="partToggle" id="rightSleeve" checked><label for="rightSleeve">Right Sleeve</label></span>
+                <span><input type="checkbox" class="partToggle" id="leftSleeve" checked><label for="leftSleeve">左袖</label></span>
+                <span><input type="checkbox" class="partToggle" id="rightSleeve" checked><label for="rightSleeve">右袖</label></span>
                 <br/>
-                <span><input type="checkbox" class="partToggle" id="leftTrousers" checked><label for="leftTrousers">Left Trousers</label></span>
-                <span><input type="checkbox" class="partToggle" id="rightTrousers" checked><label for="rightTrousers">Right Trousers</label></span>
+                <span><input type="checkbox" class="partToggle" id="leftTrousers" checked><label for="leftTrousers">ズボンの左脚</label></span>
+                <span><input type="checkbox" class="partToggle" id="rightTrousers" checked><label for="rightTrousers">ズボンの右脚</label></span>
                 <br/>
-                <span><input type="checkbox" class="partToggle" id="cape"><label for="cape">Cape</label></span>
+                <span><input type="checkbox" class="partToggle" id="cape"><label for="cape">マント</label></span>
             </div>
             <div style="margin:10px">
-                <span><input type="checkbox" id="animate" checked><label for="animate">Animate</label></span>
-                <span><input type="checkbox" id="slim"><label for="slim">Slim</label></span>
+                <span><input type="checkbox" id="animate" checked><label for="animate">アニメーション</label></span>
+                <span><input type="checkbox" id="slim"><label for="slim">スリム型</label></span>
             </div>
         </div>
 
@@ -99,28 +99,16 @@
                 options.slim = slim;
                 skinRender.render(options);
 				
-                const skinFile = document.getElementById('skinInput').files[0];
+                const file = document.getElementById('skinInput').files[0];
 
-                if (skinFile) {
+                if (file) {
                     const reader = new FileReader();
                     reader.onload = (event) => {
                         skinRender.clearScene();
                         options.url = event.target.result
                         skinRender.render(options);
                     }
-                    reader.readAsDataURL(skinFile);
-                }
-
-                const capeFile = document.getElementById('capeInput').files[0];
-
-                if (skinFile) {
-                    const reader = new FileReader();
-                    reader.onload = (event) => {
-                        skinRender.clearScene();
-                        options.url = event.target.result
-                        skinRender.render(options);
-                    }
-                    reader.readAsDataURL(capeFile);
+                    reader.readAsDataURL(file);
                 }
             })
 
