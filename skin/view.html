@@ -33,7 +33,7 @@
                 </div>
                 <div>
                     <label for="capeInput">Cape</label>
-                    <input type="file" id="capeInput">
+                    <input type="text" id="capeInput" placeholder="URL" value="">
                 </div>
             </div>
             <div style="margin: 10px;">
@@ -99,28 +99,16 @@
                 options.slim = slim;
                 skinRender.render(options);
 				
-                const skinFile = document.getElementById('skinInput').files[0];
+                const file = document.getElementById('skinInput').files[0];
 
-                if (skinFile) {
+                if (file) {
                     const reader = new FileReader();
                     reader.onload = (event) => {
                         skinRender.clearScene();
                         options.url = event.target.result
                         skinRender.render(options);
                     }
-                    reader.readAsDataURL(skinFile);
-                }
-
-                const capeFile = document.getElementById('capeInput').files[0];
-
-                if (skinFile) {
-                    const reader = new FileReader();
-                    reader.onload = (event) => {
-                        skinRender.clearScene();
-                        options.url = event.target.result
-                        skinRender.render(options);
-                    }
-                    reader.readAsDataURL(capeFile);
+                    reader.readAsDataURL(file);
                 }
             })
 
