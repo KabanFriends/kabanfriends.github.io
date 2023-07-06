@@ -18,8 +18,49 @@
 <link rel="stylesheet" href="css/style.css">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-<script src='/js/localize.js'></script>
+<script src="/js/localize.js"></script>
 
+<body>
+    <script>
+        function copyDiscord() {
+            navigator.clipboard.writeText("KabanFriends#7721");
+            copied = document.getElementById("discord");
+            console.log(copied)
+            copied.innerHTML = localizeLang === undefined ? " (コピーしました)" : localizedTexts["localize-topmenu-copied"];
+        }
+    </script>
+    
+    <div class="base">
+        <div class="vertical-middle">
+            <div class="horizontal-middle">
+                <div style="margin-bottom: 3em;" class="center-text">
+                    <a href="javascript:unlocalize()">日本語</a>
+                    &nbsp;
+                    <a href="javascript:localize('en')">English</a>
+                </div>
+                <div style="margin-bottom: 1em;" class="center-text">
+                    <img src="img/kabanfriends.png">
+                </div>
+                <h1 style="margin-bottom: 1em;" class="center-text">KabanFriends</h1>
+                <div style="margin-bottom: 3em;" class="center-text">
+                    <h4>
+                        <a href="minecraft/inventory_dark.html">Minecraft</a><br>
+                        <a href="uselessbot.html">UselessBot</a><br>
+                        <a href="misc.html", id="localize-topmenu-misc", class="localize">その他</a>
+                    </h4>
+                </div>
+                <hr>
+                <div class="center-text">
+                    Discord: <a href="javascript:copyDiscord()">KabanFriends#7721</a><span id="discord"></span><br>
+                    GitHub: <a href="https://github.com/KabanFriends">KabanFriends</a><br>
+                    <a href="otherlinks.html", id="localize-topmenu-othersns", class="localize">その他のリンク</a><br>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!--
 <body>
     <script>
         function copyDiscord() {
@@ -53,3 +94,4 @@
         </span>
     </div>
 </body>
+-->
