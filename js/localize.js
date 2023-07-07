@@ -33,7 +33,9 @@ function unlocalize() {
         elem.textContent = originalTexts[localizeElements[i]];
     }
 
-    localStorage.removeItem("localizeLang");
+    if (typeof(Storage) !== "undefined") {
+        localStorage.removeItem("localizeLang");
+    }
 }
 
 function localize(lang) {
@@ -41,10 +43,16 @@ function localize(lang) {
     $.getJSON(`/lang/${lang}.json`, function(json) {
         localizedTexts = json;
         for (var i = 0; i < localizeElements.length; i++) {
-            var elem = document.getElementById(localizeElements[i]);
-            elem.textContent = json[localizeElements[i]];
+            if (localizeElements[i] in json) {
+                var elem = document.getElementById(localizeElements[i]);
+                elem.textContent = json[localizeElements[i]];
+            } else {
+                console.error("MISSING LOCALIZATION KEY IN JSON!! " + localizeElements[i]);
+            }
         }
     });
 
-    localStorage.setItem("localizeLang", lang);
+    if (typeof(Storage) !== "undefined") {
+        localStorage.setItem("localizeLang", lang);
+    }
 }

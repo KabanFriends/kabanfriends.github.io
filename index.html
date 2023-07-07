@@ -15,28 +15,17 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 </head>
 
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="/css/style.css">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 <script src="/js/localize.js"></script>
 
 <body>
-    <script>
-        function copyDiscord() {
-            navigator.clipboard.writeText("KabanFriends#7721");
-            copied = document.getElementById("discord");
-            console.log(copied)
-            copied.innerHTML = localizeLang === undefined ? " (コピーしました)" : localizedTexts["localize-topmenu-copied"];
-        }
-    </script>
-    
     <div class="base">
         <div class="vertical-middle">
             <div class="horizontal-middle">
                 <div style="margin-bottom: 3em;" class="center-text">
-                    <a href="javascript:unlocalize()">日本語</a>
-                    &nbsp;
-                    <a href="javascript:localize('en')">English</a>
+                    <span id="langbuttons"></span>
                 </div>
                 <div style="margin-bottom: 1em;" class="center-text">
                     <img src="img/kabanfriends.png">
@@ -58,10 +47,6 @@
             </div>
         </div>
     </div>
-</body>
-
-<!--
-<body>
     <script>
         function copyDiscord() {
             navigator.clipboard.writeText("KabanFriends#7721");
@@ -69,29 +54,9 @@
             console.log(copied)
             copied.innerHTML = localizeLang === undefined ? " (コピーしました)" : localizedTexts["localize-topmenu-copied"];
         }
+
+        $.get("/lang.html", function(data){
+            $("#langbuttons").replaceWith(data);
+        });
     </script>
-    <div class="center">
-        <h4>
-            <a href="javascript:unlocalize()">日本語</a>
-            &nbsp;
-            <a href="javascript:localize('en')">English</a>
-        </h4>
-        <br>
-        <img src="img/kabanfriends.png">
-        <h1>KabanFriends</h1>
-        <br>
-        <h4>
-            <a href="uselessbot.html">UselessBot</a><br>
-            <a href="minecraft/inventory_dark.html">Minecraft</a><br>
-            <a href="misc.html", id="localize-topmenu-misc", class="localize">その他</a>
-        </h4>
-        <br>
-        <hr>
-        <span>
-            Discord: <a href="javascript:copyDiscord()">KabanFriends#7721</a><span id="discord"></span><br>
-            GitHub: <a href="https://github.com/KabanFriends">KabanFriends</a><br>
-            <a href="othersns.html", id="localize-topmenu-othersns", class="localize">その他のSNS</a><br>
-        </span>
-    </div>
 </body>
--->

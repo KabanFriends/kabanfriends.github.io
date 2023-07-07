@@ -1,12 +1,28 @@
-<div class="topcenter">
-    <br>
-    <h2>Minecraft</h2>
-    </font>
-    <br>
-    <a href="inventory_dark.html">Inventory: Dark Mode</a><br class="mobile">
-    <span class="no-mobile">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-    <a href="misaki2.html">MisakiGothic2forMC</a><br class="mobile">
-    <span class="no-mobile">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-    <a href="craftgr.html">CraftGR</a>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+<div class="horizontal-middle">
+    <div class="center-text">
+        <div style="margin-top: 1em; margin-bottom: 1em;">
+            <img src="/favicon.ico", style="height: 16px; margin-right: 3px;">
+            <a href="/">kabanfriends.github.io</a>
+            <br class="mobile">
+            <span class="no-mobile", style="margin-left: 1em; margin-right: 1em;">-</span>
+            <span id="langbuttons"></span>
+        </div>
+        <h2 style="margin-bottom: 0.5em; font-size: 40px;">Minecraft: Java Edition</h2>
+        <h4 style="margin-bottom: 1.5em;">
+            <a href="inventory_dark.html">Inventory: Dark Mode</a><br class="mobile">
+            <span class="no-mobile">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <a href="misaki2.html">MisakiGothic2forMC</a><br class="mobile">
+            <span class="no-mobile">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <a href="craftgr.html">CraftGR</a>
+        </h4>
+    </div>
 </div>
 <hr>
+
+<script>
+    $.get("/lang.html", function(data){
+        $("#langbuttons").replaceWith(data);
+    });
+</script>

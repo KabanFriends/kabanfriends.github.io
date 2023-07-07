@@ -4,10 +4,6 @@ html body {
     font-family: 'Noto Sans JP', sans-serif;
 }
 
-.topcenter {
-    text-align: center;
-}
-
 .base {
     display: table;
     position: absolute;
@@ -32,16 +28,8 @@ html body {
 }
 
 .center-box {
-    margin: 0 auto;
-}
-
-.main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    min-height: 50vh;
+    text-align: left;
+    display: inline-block;
 }
 
 h1 {
@@ -83,6 +71,11 @@ h4 {
     .horizontal-middle {
         width: 75%;
     }
+
+    .preview-image-wide {
+        width: 75%;
+        object-fit: cover;
+    }
 }
 
 /*mobile*/
@@ -95,6 +88,12 @@ h4 {
 
     .horizontal-middle {
         width: 90%;
+    }
+
+    .preview-image-wide {
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
     }
 }
 

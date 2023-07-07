@@ -1,5 +1,19 @@
 {
     "localize-topmenu-misc": "Miscellaneous",
     "localize-topmenu-othersns": "Other links",
-    "localize-topmenu-copied": " (Copied!)"
+    "localize-topmenu-copied": " (Copied!)",
+
+    "localize-mc-use": "Rules for Use",
+    "localize-mc-download": "Downloads",
+    
+    "localize-mc-invdark-description": "A resource pack that makes your inventory dark",
+    "localize-mc-invdark-use-1": "If you are using this pack WITHOUT any modifications, you can use the pack in any form of media without crediting me. Though I will be glad if you do credit me :)",
+    "localize-mc-invdark-use-2": "If you are using or redistributing the modified version of this pack, you need to credit me.",
+
+    "localize-mc-misaki2-description-1": "A resource pack to replace the Japanese font with ",
+    "localize-mc-misaki2-description-2": "Misaki Gothic 2",
+    "localize-mc-misaki2-description-3": ".",
+
+    "localize-mc-misaki2-use-1": "If you are using this pack WITHOUT any modifications, you can use the pack in any form of media without crediting me. Though I will be glad if you do credit me :)",
+    "localize-mc-misaki2-use-2": "If you are using or redistributing the modified version of this pack, you need to credit me."
 }

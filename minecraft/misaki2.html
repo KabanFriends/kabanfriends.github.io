@@ -5,7 +5,7 @@
     <meta name="author" content="KabanFriends">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="content-language" content="ja">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>MisakiGothic2forMC</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,40 +13,55 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
 
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 
-<link rel="stylesheet" href="../css/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script src="/js/localize.js"></script>
+
+<link rel="stylesheet" href="/css/style.css">
 
 <body>
-    <div id="topbar"></div>
-    <div class="main">
-        <h1>MisakiGothic2<br class="mobile">forMC</h1>
-        <span>日本語フォントを「<a href="https://littlelimit.net/misaki.htm">美咲ゴシック第２</a>」にするリソースパックです</span>
-        <br>
-        <img src="img/settings.jpg", style="width:34%">
-        <br>
-        <h4>
-            <a href="https://github.com/KabanFriends/creation/raw/master/misaki2/MisakiGothic2forMC_1_20.zip">1.20</a>&nbsp;&nbsp;
-            <a href="https://github.com/KabanFriends/creation/raw/master/misaki2/MisakiGothic2forMC_1194.zip">1.19.4</a>&nbsp;&nbsp;
-            <a href="https://github.com/KabanFriends/creation/raw/master/misaki2/MisakiGothic2forMC_1193.zip">1.19.3</a>&nbsp;&nbsp;
-            <a href="https://github.com/KabanFriends/creation/raw/master/misaki2/MisakiGothic2forMC_119.zip">1.19～1.19.2</a>&nbsp;&nbsp;
-            <a href="https://github.com/KabanFriends/creation/raw/master/misaki2/MisakiGothic2forMC_118.zip">1.18.x</a>&nbsp;&nbsp;
-            <a href="https://github.com/KabanFriends/creation/raw/master/misaki2/MisakiGothic2forMC_117.zip">1.17.x</a>&nbsp;&nbsp;
-            <a href="https://github.com/KabanFriends/creation/raw/master/misaki2/MisakiGothic2forMC_116.zip">1.16.x</a>
-            <br>a
-            <br>a
-            <br>a
-            <br>a
-            <br>a
-            <br>a
-
-            <br>a<br>a
-            <br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>av
-        </h4>
+    <div class="base">
+        <div id="topbar"></div>
+        <div class="horizontal-middle">
+            <div class="center-text">
+                <h1 style="margin-top: 0.5em; margin-bottom: 0.5em;">MisakiGothic2<br class="mobile">forMC</h1>
+                <div style="margin-bottom: 1em;">
+                    <span id="localize-mc-misaki2-description-1" class="localize">日本語フォントを「</span>
+                    <a href="https://littlelimit.net/misaki.htm" id="localize-mc-misaki2-description-2" class="localize">美咲ゴシック第２</a>
+                    <span id="localize-mc-misaki2-description-3" class="localize">」にするリソースパックです</span>
+                </div>
+                <div style="margin-top: 2em; margin-bottom: 2em;">
+                    <img src="img/settings.jpg" class="preview-image-wide">
+                </div>
+                <h2 id="localize-mc-use" style="margin-bottom: 0.5em;" class="localize">利用について</h2>
+                <div class="center-box">
+                    <span id="localize-mc-misaki2-use-1" class="localize">
+                        このリソースパックを、改変を加えずに利用する際は、制作者またはこのサイトの掲載は不要です。
+                        動画等のコンテンツ内で、自由に利用することができます。
+                        (でもちゃんと掲載してくれたら僕が喜びます)
+                    </span>
+                    <br>
+                    <span id="localize-mc-misaki2-use-2" class="localize">
+                        このリソースパックに改変を加えた状態で、動画等のコンテンツ内での利用や、再配布を行う場合、
+                        制作者(KabanFriends)またはこのサイトのURLを掲載してください。
+                    </span>
+                </div>
+                <h2 id="localize-mc-download" style="margin-top: 0.5em; margin-bottom: 0.5em;" class="localize">ダウンロード</h2>
+                <div style="margin-bottom: 3em;">
+                    <h4>
+                        <a href="https://github.com/KabanFriends/creation/raw/master/misaki2/MisakiGothic2forMC_1_20.zip">1.20</a><br>
+                        <a href="https://github.com/KabanFriends/creation/raw/master/misaki2/MisakiGothic2forMC_1194.zip">1.19.4</a><br>
+                        <a href="https://github.com/KabanFriends/creation/raw/master/misaki2/MisakiGothic2forMC_1193.zip">1.19.3</a><br>
+                        <a href="https://github.com/KabanFriends/creation/raw/master/misaki2/MisakiGothic2forMC_119.zip">1.19～1.19.2</a><br>
+                        <a href="https://github.com/KabanFriends/creation/raw/master/misaki2/MisakiGothic2forMC_118.zip">1.18.x</a><br>
+                        <a href="https://github.com/KabanFriends/creation/raw/master/misaki2/MisakiGothic2forMC_117.zip">1.17.x</a><br>
+                        <a href="https://github.com/KabanFriends/creation/raw/master/misaki2/MisakiGothic2forMC_116.zip">1.16.x</a>
+                    </h4>
+                </div>
+            </div>
+        </div>
     </div>
-
     <script>
         $.get("topbar.html", function(data){
             $("#topbar").replaceWith(data);
