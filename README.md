@@ -1,1 +1,0 @@
-# https://kabanfriends.github.io/
