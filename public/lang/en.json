@@ -1,0 +1,68 @@
+{
+    "localize-topmenu-misc": "Miscellaneous",
+    "localize-topmenu-othersns": "Other links",
+    "localize-topmenu-copied": " (Copied!)",
+
+    "localize-mc-java": "Minecraft: Java Edition",
+
+    "localize-mc-info": "About",
+    "localize-mc-use": "Rules for Use",
+    "localize-mc-attributions": "Attributions",
+    "localize-mc-download": "Download",
+    "localize-mc-downloads": "Downloads",
+    
+    "localize-mc-invdark-description": "A resource pack that makes your inventory dark",
+    
+    "localize-mc-invdark-use-1": "If you are using this pack WITHOUT any modifications, you can use the pack in any form of media without crediting me. Though I will be glad if you do credit me :)",
+    "localize-mc-invdark-use-2": "If you are using or redistributing the modified version of this pack, you need to credit me.",
+
+    "localize-mc-misaki2-description-1": "A resource pack to replace the Japanese font with ",
+    "localize-mc-misaki2-description-2": "Misaki Gothic 2",
+    "localize-mc-misaki2-description-3": ".",
+
+    "localize-mc-misaki2-use-1": "If you are using this pack WITHOUT any modifications, you can use the pack in any form of media without crediting me. Though I will be glad if you do credit me :)",
+    "localize-mc-misaki2-use-2": "If you are using or redistributing the modified version of this pack, you need to credit me.",
+
+    "localize-mc-forcegl20-description": "A Forge/Fabric mod that makes Minecraft 1.17+ work on old computers",
+    
+    "localize-mc-forcegl20-info": "If you try to play Minecraft: Java Edition version 1.17 or newer on computers with an old graphics card, you might not be able to launch the game due to the error below. This mod forcefully lowers the required spec of the game, so you might be able to play new versions on old computers.",
+
+    "localize-mc-craftgr-description-1": "A Forge/Fabric mod that lets you listen to Touhou Project arrangements streamed from ",
+    "localize-mc-craftgr-description-2": "Gensokyo Radio",
+    "localize-mc-craftgr-description-3": " while playing Minecraft.",
+
+    "localize-mc-craftgr-attributions-1": "Audio content provided by Gensokyo Radio",
+    "localize-mc-craftgr-attributions-2": "Touhou Project: © Team Shanghai Alice",
+
+    "localize-uselessbot-features": "Some of the features",
+    "localize-uselessbot-install": "Try out my cool bot!",
+
+    "localize-uselessbot-description-1": "UselessBot is a silly Discord Bot created by KabanFriends, packed with a ton of trash ideas!",
+    "localize-uselessbot-description-2": "It has a lot of cool features that nobody would probably ever use... So like, this bot is basically the most wasteful way to utilize a bot! (honestly quite incredible)",
+
+    "localize-uselessbot-features-1": "Generating images! (/mariomaker, /moon etc.)",
+    "localize-uselessbot-features-2": "Manipulating images! (/glitch, /lego, /package etc.)",
+    "localize-uselessbot-features-3": "Use the calculator on discord! (/dentaku)",
+    "localize-uselessbot-features-4": "Play a game of Word-Wolf! (/wordwolf)",
+    "localize-uselessbot-features-5": "Watch random images of dogs & cats! (/inu, /neko)",
+    "localize-uselessbot-features-6": "Send messages with BOT icon next to your name! (/botme)",
+    
+    "localize-uselessbot-english": "After adding the bot, you can use \"/lang en\" to set the bot language to English.",
+
+    "localize-uselessbot-install-button": "Add UselessBot to your server",
+    "localize-uselessbot-support": "UselessBot Support Server",
+    
+    "localize-misc-title": "Miscellaneous",
+
+    "localize-misc-mildescape-description": "A playable archive of TESSHI-e's series of escape-the-room Flash games, \"MILD ESCAPE\".",
+
+    "localize-misc-old-tools": "Very Old Tools",
+    "localize-misc-old-tools-description": "These are some of the oldest tools I've ever made. These are for the purpose of archiving and I will not provide any support for them.",
+
+    "localize-mildescape-unarchived": "[NOT ARCHIVED]",
+    "localize-mildescape-disclaimer": "MILD ESCAPE No.117-122 are not included in this archive, as they are not created in Flash.",
+
+    "localize-mildescape-back": "Go Back",
+    "localize-mildescape-fullscreen": "Enable Fullscreen",
+    "localize-mildescape-fullscreen-error": "Failed to enable the fullscreen mode."
+}

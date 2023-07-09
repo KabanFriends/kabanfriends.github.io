@@ -1,0 +1,65 @@
+---
+import "../styles/global.css";
+
+import Metadata from "../components/Metadata.astro";
+import Top from "../components/Top.astro";
+---
+
+<html lang="ja">
+    <Metadata title="KabanFriends"/>
+    <div class="base">
+        <div class="horizontal-middle">
+            <Top />
+            <div class="center-text">
+                <h1 id="localize-misc-title" class="title localize">その他の制作物</h1>
+                <hr>
+                <div>
+                    <h2 class="title2"><a href="mildescape">MILD ESCAPE ARCHIVE</a></h2>
+                    <div id="localize-misc-mildescape-description" class="description localize">
+                        TESSHI-e氏によって制作されたFlash製脱出ゲームのシリーズ「MILD ESCAPE」の、ブラウザ上でプレイ可能な&#x200B;アーカイブサイトです。
+                    </div>
+                </div>
+                <hr>
+                <div>
+                    <h2 id="localize-misc-old-tools" class="title2 localize">結構昔に作ったもの</a></h2>
+                    <div id="localize-misc-old-tools-description" class="description localize">
+                        かなり前に作ったツール集です。自由にダウンロードし、利用していただいて構いませんが、ツールに関するサポートは一切できませんので、ご了承ください。
+                    </div>
+                    <div class="old-tools">
+                        <h4>
+                            <ul>
+                                <li><a href="https://www.dropbox.com/s/9zpyy7tjihzedig/RemoteTalkEX%20v1.3.2.zip?dl=1", target="_blank">RemoteTalkEX (v1.3.2)</a></li>
+                                <li><a href="https://github.com/KabanFriends/creation/raw/master/simplekeysound/SimpleKeySound-V1.1.2.zip", target="_blank">SimpleKeySound (v.1.1.2)</a></li>
+                                <li><a href="https://www.dropbox.com/s/vnqgbvbx9irncx2/ATSUMORI%20v1.35.zip?dl=1", target="_blank">ATSUMORI (v1.35)</a></li>
+                            </ul>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</html>
+
+<style>
+    .title {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+
+    .title2 {
+        text-align: center;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+
+    .description {
+        text-align: left;
+        padding-bottom: 2em;
+    }
+
+    .old-tools {
+        text-align: left;
+        margin:0 auto;
+        display: inline-block;
+    }
+</style>

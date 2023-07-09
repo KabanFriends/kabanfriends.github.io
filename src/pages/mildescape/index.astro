@@ -1,0 +1,99 @@
+---
+import MildEscapeMetadata from "../../components/MildEscapeMetadata.astro";
+import Top from "../../components/Top.astro";
+
+import archiveData from "../../data/mildescape.json";
+
+const titles = archiveData.games;
+const unarchived = archiveData.unarchived_games;
+---
+
+<html lang="ja">
+    <MildEscapeMetadata title="MILD ESCAPE ARCHIVE"/>
+    <div class="base">
+        <div class="horizontal-middle">
+            <Top />
+            <div class="center-text">
+                <h1 class="title">MILD ESCAPE ARCHIVE</h1>
+                <div class="desc-ja description">
+                    「MILD ESCAPE」はTESSHI-e氏によって制作されたFlash製脱出ゲームのシリーズです。<br>
+                    このページは、ゲームの公開停止とFlashの終了に伴いプレイ不可能となったMILD ESCAPEのアーカイブサイトです。<br>
+                    Flashの再生には、<a href="https://ruffle.rs/">Ruffle</a>に、日本語フォントや一部機能の修正を加えた<a href="https://github.com/KabanFriends/ruffle">KabanFriends/ruffle</a>を使用しています。
+                </div>
+                <div class="desc-en description">
+                    This website is an archive of MILD ESCAPE, a series of point-and-click escape Flash games, created by TESSHI-e.<br>
+                    Below is the list of archived games that were removed due to the Flash Player End of Support and the shutdown of the original website. All of the archived games can be played in the web browser.<br>
+                    For running Flash games, it uses <a href="https://ruffle.rs/">Ruffle</a> with <a href="https://github.com/KabanFriends/ruffle">custom modifications</a> to add support for Japanese characters.
+                </div>
+                MILD ESCAPE: © 2008-2019 TESSHI-e
+                <hr>
+                <div class="game-list">
+                    <ul>
+                        {Object.keys(titles).map((id) => unarchived.includes(id) ? 
+                            <li>{titles[id]} <span id="localize-mildescape-unarchived" class="localize">[アーカイブ無し]</span></li> :
+                            <li><a href={`mildescape/${id}`}>{titles[id]}</a></li>)}
+                    </ul>
+                </div>
+                <div id="localize-mildescape-disclaimer" class="description localize">
+                    MILD ESCAPE No.117からNo.122はFlash製ではないため、このアーカイブには掲載していません。
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script is:inline>
+        var _unlocalize = unlocalize;
+        unlocalize = function() {
+            document.getElementsByClassName("desc-en")[0].style.display = "none";
+            document.getElementsByClassName("desc-ja")[0].style.display = "block";
+
+            _unlocalize();
+        }
+
+        var _localize = localize;
+        localize = function(lang) {
+            document.getElementsByClassName("desc-en")[0].style.display = "block";
+            document.getElementsByClassName("desc-ja")[0].style.display = "none";
+
+            _localize(lang);
+        }
+    </script>
+</html>
+
+<style>
+    .title {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+
+    .title2 {
+        text-align: center;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+
+    .desc-en {
+        display: none;
+    }
+
+    .description {
+        text-align: left;
+        padding-bottom: 2em;
+    }
+
+    .old-tools {
+        text-align: left;
+        margin:0 auto;
+        display: inline-block;
+    }
+
+    .game-list {
+        padding: 1cm;
+    }
+
+    ul {
+        margin:0 auto;
+        display: inline-block;
+        text-align: left;
+    }
+</style>

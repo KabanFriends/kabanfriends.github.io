@@ -1,0 +1,58 @@
+---
+import "../styles/global.css";
+import Metadata from "../components/Metadata.astro";
+import LangSelect from "../components/LangSelect.astro";
+---
+
+<html lang="ja">
+	<Metadata title="KabanFriends"/>
+
+	<div class="base">
+		<div class="vertical-middle">
+			<div class="horizontal-middle">
+				<div class="center-text">
+					<LangSelect/>
+				</div>
+				<div class="main center-text">
+					<img src="img/kabanfriends.png">
+					<h1 style="padding-top: 0.5em; padding-bottom: 1.5em;" class="center-text">KabanFriends</h1>
+					<h4>
+                        <a href="minecraft/inventory_dark">Minecraft</a><br>
+                        <a href="uselessbot">UselessBot</a><br>
+                        <a href="misc", id="localize-topmenu-misc", class="localize">その他</a>
+                    </h4>
+				</div>
+                <div class="footer center-text">
+					<hr>
+                    Discord: <a href="javascript:copyDiscord()">@kabanfriends</a><span id="discord"></span><br>
+                    GitHub: <a href="https://github.com/KabanFriends">KabanFriends</a><br>
+                    <!--<a href="otherlinks.html", id="localize-topmenu-othersns", class="localize">その他のリンク</a><br>-->
+                </div>
+			</div>
+		</div>
+	</div>
+
+	<script is:inline>
+        function copyDiscord() {
+            navigator.clipboard.writeText("kabanfriends");
+            copied = document.getElementById("discord");
+            console.log(copied)
+            copied.innerHTML = localizeLang === undefined ? " (コピーしました)" : localizedTexts["localize-topmenu-copied"];
+        }
+    </script>
+</html>
+
+<style>
+	.horizontal-middle {
+	    padding-bottom: 0;
+	}
+
+	.main {
+		line-height: 2em;
+		padding: 1.5em;
+	}
+
+	.footer {
+		padding: 1.5em;
+	}
+</style>

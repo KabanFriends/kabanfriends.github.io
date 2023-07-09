@@ -1,0 +1,120 @@
+---
+import "../styles/global.css";
+
+import Metadata from "../components/Metadata.astro";
+import Top from "../components/Top.astro";
+---
+
+<html lang="ja">
+    <Metadata title="KabanFriends"/>
+    <div class="base">
+        <div class="horizontal-middle">
+            <Top />
+            <div class="center-text">
+                <h1 class="title">UselessBot</h1>
+                <div class="bot-float-container">
+                    <div class="bot-float-child">
+                        <img src="/img/uselessbot.jpg" class="bot-img"/>
+                    </div>
+                    <div class="bot-float-child">
+                        <div id="localize-uselessbot-description-1", class="localize description">
+                            KabanFriendsが身内のノリで開発し始めて、思い付いたアイデアを適当に詰め込んだDiscordのBOTです。
+                        </div>
+                        <div id="localize-uselessbot-description-2", class="localize description">
+                            究極の「無駄」を目指して、誰も使わないような機能をたくさん入れたところがこだわりです！
+                        </div>
+                        <h2 id="localize-uselessbot-features" class="localize title2">Botの機能を一部紹介</h2>
+                        <div class="features">
+                            <ul>
+                                <li id="localize-uselessbot-features-1" class="localize">画像生成ができる！ (/mariomaker, /moon 等)</li>
+                                <li id="localize-uselessbot-features-2" class="localize">画像にエフェクトをかけれる！ (/glitch, /lego, /package 等)</li>
+                                <li id="localize-uselessbot-features-3" class="localize">Discordで電卓が使える！ (/dentaku)</li>
+                                <li id="localize-uselessbot-features-4" class="localize">みんなで「ワードウルフ」で遊べる！ (/wordwolf)</li>
+                                <li id="localize-uselessbot-features-5" class="localize">ランダムに犬・猫の画像を見せてくれる! (/inu, /neko)</li>
+                                <li id="localize-uselessbot-features-6" class="localize">誰でもBotマークをつけて発言できる！ (/botme)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div style="clear: both;" />
+                <h2 id="localize-uselessbot-install", class="title2 localize">UselessBotを使ってみる</h2>
+                <span id="localize-uselessbot-english" class="localize english-help"></span>
+                <div>
+                    <h4>
+                        <a href="https://discord.com/oauth2/authorize?client_id=451337575366656000&permissions=535582600817&scope=bot%20applications.commands" id="localize-uselessbot-install-button" class="localize">UselessBotを導入する</a><br>
+                        <a href="https://discord.gg/VGNpEjx" id="localize-uselessbot-support" class="localize">UselessBotサポートサーバー</a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</html>
+
+<style>
+    .title {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+
+    .title2 {
+        text-align: center;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+
+    .description {
+        padding-bottom: 2em;
+    }
+
+    .english-help {
+        display: block;
+        padding-bottom: 2em;
+    }
+
+    .features {
+        text-align: left;
+        margin:0 auto;
+        display: inline-block;
+    }
+
+    .bot-float-child {
+        text-align: left;
+    }
+
+    /*pc*/
+    @media screen and (min-width: 600px) {
+        .bot-img {
+            box-sizing: content-box;
+            width: 100%;
+            display: inline;
+            float: left;
+        }
+
+        .bot-float-container {
+            padding-bottom: 0.8cm;
+        }
+
+        .bot-float-child {
+            box-sizing: border-box;
+            width: 50%;
+            display: inline;
+            float: left;
+            padding: 20px;
+        }
+    }
+
+    /*mobile*/
+    @media screen and (max-width: 600px) {
+        .bot-img {
+            display: block;
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            object-position: top center;
+        }
+
+        .bot-float-child {
+            padding-bottom: 0.8cm;
+        }
+    }
+</style>

@@ -1,0 +1,103 @@
+---
+const id = "craftgr";
+
+import "../../styles/global.css";
+
+import Metadata from "../../components/Metadata.astro";
+import MinecraftPageList from "../../layouts/MinecraftPageList.astro";
+---
+<html lang="ja">
+    <Metadata title="CraftGR" />
+    <div class="base">
+        <div class="horizontal-middle">
+            <MinecraftPageList />
+            <div class="main center-text">
+                <h1 class="title">CraftGR</h1>
+                <div class="description">
+                    <span id={`localize-mc-${id}-description-1`} class="localize">Minecraftをプレイしながら「</span><!--
+                    --><a href="https://gensokyoradio.net/" id={`localize-mc-${id}-description-2`} class="localize">Gensokyo Radio</a><!--
+                    --><span id={`localize-mc-${id}-description-3`} class="localize">」で配信されている東方アレンジ楽曲を聴けるmod (Forge & Fabric対応)</span>    
+                </div>
+                <div>
+                    <img src="/img/minecraft/craftgr_1.jpg" class="preview-image-wide" />
+                    <img src="/img/minecraft/craftgr_2.jpg" class="preview-image-wide preview-image-wide2" />
+                </div>
+                <h2 id="localize-mc-attributions" class="title2 localize">帰属表示</h2>
+                <div class="attributions">
+                    <ul>
+                        <li id="localize-mc-craftgr-attributions-1" class="localize">再生される音声はGensokyo Radioによって提供されています</li>
+                        <li>Gensokyo Radio: © LunarSpotlight</li>
+                        <li id="localize-mc-craftgr-attributions-2" class="localize">東方Project: © 上海アリス幻樂団</li>
+                    </ul>
+                </div>
+                <h2 id="localize-mc-download" class="title2 localize">ダウンロード</h2>
+                <div>
+                    <h4>
+                        <a href="https://modrinth.com/mod/craftgr">Modrinth</a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</html>
+
+<style>
+    ul {
+        text-align: left;
+    }
+
+    .attributions {
+        margin:0 auto;
+        display: inline-block;
+    }
+
+    .title {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+
+    .title2 {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+
+    .description {
+        display: block;
+        padding-top: 0em;
+        padding-bottom: 1em;
+    }
+
+    .use-text {
+        text-align: left;
+        display: inline-block;
+    }
+
+    .preview-image-wide {
+        padding-top: 1cm;
+        padding-bottom: 0.5em;
+    }
+
+    /*pc*/
+    @media screen and (min-width: 600px) {
+        .preview-image-wide {
+            width: 55%;
+        }
+    }
+
+    .preview-image-wide2 {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    /*mobile*/
+    @media screen and (max-width: 600px) {
+        .preview-image-wide {
+            width: 75%;
+        }
+
+        .preview-image-wide2 {
+            object-position: left center;
+            aspect-ratio: 1/1;
+        }
+    }
+</style>

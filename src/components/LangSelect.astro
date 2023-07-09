@@ -1,0 +1,29 @@
+---
+const langs = {
+    "en": "English"
+}
+---
+<ul class="inline-block">
+    <li><a href="javascript:unlocalize()">日本語</a></li>
+    {Object.keys(langs).map((key) => <li><a href={`javascript:localize("${key}")`} >{langs[key]}</a></li>)}
+</ul>
+
+<script is:inline src="/js/localize.js"></script>
+
+<style>
+    ul {
+        display: inline;
+	    list-style-type: none;
+	    padding-left: 0;
+    }
+
+    li {
+        margin: 0;
+	    padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    .inline-block li {
+        display: inline-block;
+    }
+</style>

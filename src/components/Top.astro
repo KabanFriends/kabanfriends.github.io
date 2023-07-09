@@ -1,0 +1,31 @@
+---
+import "../styles/global.css";
+
+import LangSelect from "./LangSelect.astro";
+---
+<html lang="ja">
+    <div class="main center-text">
+        <div class="url">
+            <img src="/favicon.ico", class="icon">
+            <a href="/">kabanfriends.github.io</a>
+        </div>
+        <br class="mobile">
+        <span class="no-mobile", style="padding: 1em;">―</span>
+        <LangSelect/>
+    </div>
+</html>
+
+<style>
+    .main {
+        padding: 1em;
+    }
+
+    .icon {
+        height: 1em;
+    }
+
+    .url {
+        display: inline;
+        padding: 1em;
+    }
+</style>

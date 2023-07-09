@@ -1,0 +1,90 @@
+---
+const id = "invdark";
+
+import "../../styles/global.css";
+
+import Metadata from "../../components/Metadata.astro";
+import MinecraftPageList from "../../layouts/MinecraftPageList.astro";
+---
+<html lang="ja">
+    <Metadata title="Inventory: Dark Mode" />
+    <div class="base">
+        <div class="horizontal-middle">
+            <MinecraftPageList />
+            <div class="main center-text">
+                <h1 class="title">Inventory: Dark Mode</h1>
+                <span id={`localize-mc-${id}-description`}, class="localize description">インベントリーがダークカラーになるリソースパック</span>
+                <div>
+                    <img src="/img/minecraft/inventory_dark_1.jpg" class="preview-image-wide" />
+                    <img src="/img/minecraft/inventory_dark_2.jpg" class="preview-image-wide" />
+                </div>
+                <h2 id="localize-mc-use" class="title2 localize">利用について</h2>
+                <div class="use-text">
+                    <span id={`localize-mc-${id}-use-1`} class="localize">
+                        このリソースパックを、改変を加えずに利用する際は、制作者またはこのサイトの掲載は不要です。
+                        動画等のコンテンツ内で、自由に利用することができます。
+                        (でもちゃんと掲載してくれたら僕が喜びます)
+                    </span>
+                    <br>
+                    <span id={`localize-mc-${id}-use-2`} class="localize">
+                        このリソースパックに改変を加えた状態で、動画等のコンテンツ内での利用や、再配布を行う場合、
+                        制作者(KabanFriends)またはこのサイトのURLを掲載してください。
+                    </span>
+                </div>
+                <h2 id="localize-mc-downloads" class="title2 localize">ダウンロード</h2>
+                <div>
+                    <h4>
+                        <a href="https://github.com/KabanFriends/creation/raw/master/inventory_dark_mode/Inventory_Dark_Mode_1_20.zip">1.20.x</a><br>
+                        <a href="https://github.com/KabanFriends/creation/raw/master/inventory_dark_mode/Inventory_Dark_Mode_1194.zip">1.19.4</a><br>
+                        <a href="https://github.com/KabanFriends/creation/raw/master/inventory_dark_mode/Inventory_Dark_Mode_1193.zip">1.19.3</a><br>
+                        <a href="https://github.com/KabanFriends/creation/raw/master/inventory_dark_mode/Inventory_Dark_Mode_119.zip">1.19 ～ 1.19.2</a><br>
+                        <a href="https://github.com/KabanFriends/creation/raw/master/inventory_dark_mode/Inventory_Dark_Mode_118.zip">1.18.x</a><br>
+                        <a href="https://github.com/KabanFriends/creation/raw/master/inventory_dark_mode/Inventory_Dark_Mode_117.zip">1.17.x</a><br>
+                        <a href="https://github.com/KabanFriends/creation/raw/master/inventory_dark_mode/Inventory_Dark_Mode_116.zip">1.16.x</a><br>
+                        <a href="https://github.com/KabanFriends/creation/raw/master/inventory_dark_mode/Inventory_Dark_Mode_115.zip">1.15.x</a><br>
+                        <a href="https://github.com/KabanFriends/creation/raw/master/inventory_dark_mode/Inventory_Dark_Mode_114.zip">1.14.x</a><br>
+                        <a href="https://github.com/KabanFriends/creation/raw/master/inventory_dark_mode/Inventory_Dark_Mode_112.zip">1.12.x</a><br>
+                        <a href="https://github.com/KabanFriends/creation/raw/master/inventory_dark_mode/Inventory_Dark_Mode_188-9.zip">1.8.x</a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</html>
+
+<style>
+    .title {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+
+    .title2 {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+
+    .description {
+        display: block;
+        padding-top: 0em;
+        padding-bottom: 1em;
+    }
+
+    .use-text {
+        text-align: left;
+        display: inline-block;
+    }
+
+    .preview-image-wide {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    /*mobile*/
+    @media screen and (max-width: 600px) {
+        .preview-image-wide {
+            aspect-ratio: 1/1;
+        }
+    }
+</style>

@@ -1,0 +1,79 @@
+---
+const id = "forcegl20";
+
+import "../../styles/global.css";
+
+import Metadata from "../../components/Metadata.astro";
+import MinecraftPageList from "../../layouts/MinecraftPageList.astro";
+---
+<html lang="ja">
+    <Metadata title="ForceGL20" />
+    <div class="base">
+        <div class="horizontal-middle">
+            <MinecraftPageList />
+            <div class="main center-text">
+                <h1 class="title">ForceGL20</h1>
+                <span id={`localize-mc-${id}-description`} class="localize description">古いPCでマイクラ1.17以上が動くようにするmod (Forge & Fabric対応)</span>
+                <h2 id="localize-mc-info" class="title2 localize">概要</h2>
+                <div class="use-text">
+                    <span id={`localize-mc-${id}-info`} class="localize">
+                        グラフィックカードが古いPCで、Minecraft(Java版)のバージョン1.17以上が起動しようとすると、
+                        以下のようなエラーが出てプレイできないことがあります。このmodを使って、Minecraftの起動に必要なスペックを
+                        無理矢理下げることで、古いPCでも新しいバージョンをプレイできるようになるかもしれません。
+                    </span>
+                </div>
+                <div class="center-text">
+                    <img src="/img/minecraft/forcegl20.jpg" class="preview-image-wide" />
+                </div>
+                <h2 id="localize-mc-download" class="title2 localize">ダウンロード</h2>
+                <div>
+                    <h4>
+                        <a href="https://modrinth.com/mod/forcegl20">Modrinth</a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</html>
+
+<style>
+    .title {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+
+    .title2 {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+
+    .description {
+        display: block;
+        padding-top: 0em;
+        padding-bottom: 1em;
+    }
+
+    .use-text {
+        text-align: left;
+        display: inline-block;
+    }
+
+    .preview-image-wide {
+        padding-top: 1cm;
+        padding-bottom: 0.5em;
+    }
+
+    /*pc*/
+    @media screen and (min-width: 600px) {
+        .preview-image-wide {
+            width: 55%;
+        }
+    }
+
+    /*mobile*/
+    @media screen and (max-width: 600px) {
+        .preview-image-wide {
+            width: 100%;
+        }
+    }
+</style>

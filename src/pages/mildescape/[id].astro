@@ -1,0 +1,127 @@
+---
+import MildEscapeMetadata from "../../components/MildEscapeMetadata.astro";
+import Top from "../../components/Top.astro";
+
+import archiveData from "../../data/mildescape.json";
+
+import "../../styles/global.css";
+
+export async function getStaticPaths() {
+    const staticPaths = [];
+
+    for (const [key, value] of Object.entries(archiveData.games)) {
+        if (archiveData.unarchived_games) {
+            staticPaths.push({params: {id: key}});
+        }
+    }
+
+    return staticPaths;
+}
+
+const gameTitles = archiveData.games;
+const { id } = Astro.params;
+const swf = id === "escape_c" ? "team05re" : id;
+---
+
+<html lang="ja">
+    <script src='/js/ruffle/ruffle.js' is:inline></script>
+    <script src='/js/player.js' is:inline></script>
+
+    <MildEscapeMetadata title={`${archiveData.games[id]} / MILD ESCAPE ARCHIVE`}/>
+    
+    <div class="base">
+        <div class="content top">
+            <div class="horizontal-middle">
+                <Top />
+            </div>
+        </div>
+        <div class="content">
+            <div class="wrapper center-text">
+                <div class="sidetext">
+                    <a href="/mildescape" id="localize-mildescape-back" class="localize sidetext">ゲーム一覧に戻る</a>
+                    <h3>{gameTitles[id]}</h3>
+                </div>
+                <div class="game-container">
+                    <div class="game-1">
+                        <div class="game-2">
+                            <div id="ruffle" class="game-3" />
+                        </div>
+                    </div>
+                </div>
+                <div class="sidetext">
+                    <a href="javascript:fullscreen()" id="localize-mildescape-fullscreen" class="localize">フルスクリーン表示</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script is:inline define:vars={{swf}}>
+        window.addEventListener("load", (event) => start(swf));
+    </script>
+</html>
+
+<style>
+    html, body {
+        height: 100%;
+        margin: 0;
+    }
+
+    .content {
+        display: table-row;
+    }
+
+    .top {
+        height: 1em;
+    }
+
+    .horizontal-middle {
+        width: 100%;
+        padding: 0 !important;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .loading {
+        padding: 2em;
+    }
+
+    .game-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+
+    .game-1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .game-2 {
+        width: 100%;
+        aspect-ratio: 1/1;
+        margin: auto;
+        object-fit: contain;
+        max-height: 100%;
+    }
+
+    .game-3 {
+        height: 100%;
+        aspect-ratio: 1/1;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .sidetext {
+        padding: 1em;
+    }
+</style>
+

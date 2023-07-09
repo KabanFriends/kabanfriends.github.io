@@ -1,0 +1,18 @@
+---
+---
+<script is:inline>
+    const params = new URLSearchParams(window.location.search)
+
+    function openUrl() {
+        if (!params.has("url")) {
+            document.getElementById("message").innerHTML = "No URL specified";
+            return;
+        }
+        document.getElementById("message").innerHTML = "Redirecting";
+        window.location.href = params.get("url");
+    }
+
+    window.onload = () => openUrl();
+</script>
+
+<p id="message"></p>
