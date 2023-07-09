@@ -19,12 +19,15 @@ const { title, description } = Astro.props;
     <link rel="shortcut icon" href="/favicon.ico">
 
     <!-- Discord Embed Start -->
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content={title}>
+    <meta property="og:title" content={title}>
     <meta property="og:description" content={description}>
     <meta property="og:footer" content="kabanfriends.github.io">
     <meta property="og:image" content="https://kabanfriends.github.io/img/kabanfriends.png">
     <meta property="og:image:type" content="image/png">
+
+    <meta property="twitter:description" content={description}>
+    <meta name="twitter:title" content={title}>
+    <meta name="twitter:image" content="https://kabanfriends.github.io/img/kabanfriends.png">
 
     <meta name="theme-color" content="#69BF75">
 
