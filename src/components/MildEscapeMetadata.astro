@@ -1,22 +1,36 @@
 ---
-const { title } = Astro.props;
+const { title1, title2 } = Astro.props;
+const description = "TESSHI-e氏製作「MILD ESCAPE」のアーカイブサイト / An archive of TESSHI-e's MILD ESCAPE games";
 ---
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="TESSHI-e氏製作「MILD ESCAPE」のアーカイブサイト / An archive of TESSHI-e's MILD ESCAPE games.">
-    <meta name="keywords" content="KabanFriends">
+    <meta name="description" content={description}>
+    <meta name="keywords" content="KabanFriends, MILD ESCAPE">
     <meta name="author" content="KabanFriends">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="content-language" content="ja">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{title}</title>
+    <title>{title1}{title2}</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500&display=swap" rel="stylesheet">
 
     <link rel="shortcut icon" href="/mildescape-favicon.ico">
+
+    <!-- Discord Embed Start -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content={title1}>
+    <meta property="og:description" content={description}>
+    <meta property="og:footer" content="kabanfriends.github.io">
+    <meta property="og:image" content="https://kabanfriends.github.io/img/mildescape.png">
+    <meta property="og:image:type" content="image/png">
+
+    <meta name="theme-color" content="#478592">
+
+    <link type="application/json+oembed" href="/embed.json">
+    <!-- Discord Embed End -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 </head>
