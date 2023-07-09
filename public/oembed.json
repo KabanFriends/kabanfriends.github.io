@@ -1,6 +1,7 @@
 {
-    "type": "link",
     "version": "1.0",
+    "author_name": "",
+    "author_url": "",
     "provider_name": "kabanfriends.github.io",
     "provider_url": "https://kabanfriends.github.io"
 }
