@@ -31,7 +31,7 @@ const unarchived = archiveData.unarchived_games;
                     <ul>
                         {Object.keys(titles).map((id) => unarchived.includes(id) ? 
                             <li>{titles[id]} <span id="localize-mildescape-unarchived" class="localize">[アーカイブ無し]</span></li> :
-                            <li><a href={`mildescape/${id}`}>{titles[id]}</a></li>)}
+                            <li><a href={`/mildescape/${id}`}>{titles[id]}</a></li>)}
                     </ul>
                 </div>
                 <div id="localize-mildescape-disclaimer" class="description localize">
