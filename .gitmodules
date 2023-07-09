@@ -1,0 +1,3 @@
+[submodule "public/swf/mildescape"]
+	path = public/swf/mildescape
+	url = https://github.com/KabanFriends/mildescape-archive.git
