@@ -1,6 +1,6 @@
 {
     "localize-topmenu-misc": "Miscellaneous",
-    "localize-topmenu-othersns": "Other links",
+    "localize-topmenu-others": "Other links",
     "localize-topmenu-copied": " (Copied!)",
 
     "localize-mc-java": "Minecraft: Java Edition",
@@ -64,5 +64,9 @@
 
     "localize-mildescape-back": "Go Back",
     "localize-mildescape-fullscreen": "Enable Fullscreen",
-    "localize-mildescape-fullscreen-error": "Failed to enable the fullscreen mode."
+    "localize-mildescape-fullscreen-error": "Failed to enable the fullscreen mode.",
+
+    "localize-others-title": "Other Links",
+
+    "localize-others-niconico": "Nicovideo: "
 }

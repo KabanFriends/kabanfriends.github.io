@@ -1,0 +1,43 @@
+---
+import "../styles/global.css";
+import Metadata from "../components/Metadata.astro";
+import Top from "../components/Top.astro";
+---
+
+<html lang="ja">
+    <Metadata title="その他のリンク" description="KabanFriendsの色々なサイトのリンクです"/>
+    <div class="base">
+        <div class="horizontal-middle">
+            <Top />
+            <div class="center-text">
+                <h1 id="localize-others-title" class="title localize">その他のリンク</h1>
+                <div class="features">
+                    <ul>
+                        <li>Discord: <a href="javascript:copyDiscord()">@kabanfriends</a><span id="discord"></span></li>
+                        <li>GitHub: <a href="https://github.com/KabanFriends">KabanFriends</a></li>
+                        <li>X: <a href="https://x.com/KabanFriends">KabanFriends</a></li>
+                        <li>Steam: <a href="https://steamcommunity.com/id/KabanFriends">KabanFriends</a></li>
+                        <li><span id="localize-others-niconico" class="localize">ニコニコ動画: </span><a href="https://www.nicovideo.jp/user/124520894">KabanFriends</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script is:inline>
+        function copyDiscord() {
+            navigator.clipboard.writeText("kabanfriends");
+            copied = document.getElementById("discord");
+            console.log(copied)
+            copied.innerHTML = localizeLang === undefined ? " (コピーしました)" : localizedTexts["localize-topmenu-copied"];
+        }
+    </script>
+</html>
+
+<style>
+    .features {
+        text-align: left;
+        margin:0 auto;
+        display: inline-block;
+    }
+</style>
