@@ -46,6 +46,10 @@
     "localize-uselessbot-features-4": "Play a game of Word-Wolf! (/wordwolf)",
     "localize-uselessbot-features-5": "Watch random images of dogs & cats! (/inu, /neko)",
     "localize-uselessbot-features-6": "Send messages with BOT icon next to your name! (/botme)",
+
+    "localize-uselessbot-privacy-policy": "UselessBot Privacy Policy",
+    
+    "localize-uselessbot-terms-of-service": "UselessBot Terms of Service",
     
     "localize-uselessbot-english": "After adding the bot, you can use \"/lang en\" to set the bot language to English.",
 

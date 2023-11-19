@@ -1,0 +1,47 @@
+---
+import "../../styles/global.css";
+
+import Metadata from "../../components/Metadata.astro";
+import Top from "../../components/Top.astro";
+
+import {Content as PrivacyPolicy} from "../../markdown/privacy.mdx";
+---
+
+<html lang="ja">
+    <Metadata title="UselessBot プライバシーポリシー" description="KabanFriendsが作成した無駄なDiscordのBOT"/>
+    <div class="base">
+        <div class="horizontal-middle">
+            <Top />
+            <div class="center-text">
+                <h1 id="localize-uselessbot-privacy-policy" class="localize title">UselessBot プライバシーポリシー</h1>
+                English is not supported yet - Sorry for inconvenience
+            </div>
+            <PrivacyPolicy />
+        </div>
+    </div>
+</html>
+
+<style>
+    .title {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+
+    .title2 {
+        text-align: center;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+
+    .description {
+        padding-bottom: 2em;
+    }
+
+    /*pc*/
+    @media screen and (min-width: 600px) {
+    }
+
+    /*mobile*/
+    @media screen and (max-width: 600px) {
+    }
+</style>
