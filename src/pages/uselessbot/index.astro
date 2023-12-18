@@ -3,6 +3,9 @@ import "../../styles/global.css";
 
 import Metadata from "../../components/Metadata.astro";
 import Top from "../../components/Top.astro";
+
+const inviteLink = "https://discord.com/oauth2/authorize?client_id=451337575366656000&permissions=535582600817&scope=bot%20applications.commands";
+const supportLink = "https://discord.gg/VGNpEjx"
 ---
 
 <html lang="ja">
@@ -12,26 +15,29 @@ import Top from "../../components/Top.astro";
             <Top />
             <div class="center-text">
                 <h1 class="title">UselessBot</h1>
+                <div class="bigpad">
+                    <h2>
+                        <a href={inviteLink} id="localize-uselessbot-install-button" class="localize">▸ UselessBotを招待する ◂</a><br>
+                    </h2>
+                </div>
                 <div class="bot-float-container">
-                    <div class="bot-float-child">
+                    <div class="bot-float-child width-42">
                         <img src="/img/uselessbot.jpg" class="bot-img"/>
                     </div>
                     <div class="bot-float-child">
                         <div id="localize-uselessbot-description-1", class="localize description">
-                            KabanFriendsが身内のノリで開発し始めて、思い付いたアイデアを適当に詰め込んだDiscordのBOTです。
-                        </div>
-                        <div id="localize-uselessbot-description-2", class="localize description">
-                            究極の「無駄」を目指して、誰も使わないような機能をたくさん入れたところがこだわりです！
+                            KabanFriendsが身内のノリで開発し始めて、思い付いたアイデアを適当に詰め込んだDiscordのBOTです。画像系、便利系のコマンドの他、人狼などみんなで遊べるゲームもあり、そこそこ多機能です。
                         </div>
                         <h2 id="localize-uselessbot-features" class="localize title2">Botの機能を一部紹介</h2>
                         <div class="features">
                             <ul>
-                                <li id="localize-uselessbot-features-1" class="localize">画像生成ができる！ (/mariomaker, /moon 等)</li>
-                                <li id="localize-uselessbot-features-2" class="localize">画像にエフェクトをかけれる！ (/glitch, /lego, /package 等)</li>
-                                <li id="localize-uselessbot-features-3" class="localize">Discordで電卓が使える！ (/dentaku)</li>
-                                <li id="localize-uselessbot-features-4" class="localize">みんなで「ワードウルフ」で遊べる！ (/wordwolf)</li>
-                                <li id="localize-uselessbot-features-5" class="localize">ランダムに犬・猫の画像を見せてくれる! (/inu, /neko)</li>
-                                <li id="localize-uselessbot-features-6" class="localize">誰でもBotマークをつけて発言できる！ (/botme)</li>
+                                <li id="localize-uselessbot-features-1" class="localize">某ゲームのアレ風の画像が作れる！ (/mariomaker 等)</li>
+                                <li id="localize-uselessbot-features-2" class="localize">画像を面白く加工できる！ (/glitch, /package 等)</li>
+                                <li id="localize-uselessbot-features-3" class="localize">ワードウルフや人狼で遊べる！ (/wordwolf, /zinrou)</li>
+                                <li id="localize-uselessbot-features-4" class="localize">Discordで電卓が使える！ (/dentaku)</li>
+                                <li id="localize-uselessbot-features-5" class="localize">ランダムに犬・猫の写真が出せる！ (/inu, /neko)</li>
+                                <li id="localize-uselessbot-features-6" class="localize">Pixivの投稿を検索できる！ (/pixiv)</li>
+                                <li id="localize-uselessbot-features-7" class="localize">誰でもBotマークをつけて発言できる！ (/botme)</li>
                             </ul>
                         </div>
                     </div>
@@ -39,12 +45,16 @@ import Top from "../../components/Top.astro";
                 <div style="clear: both;" />
                 <h2 id="localize-uselessbot-install", class="title2 localize">UselessBotを使ってみる</h2>
                 <span id="localize-uselessbot-english" class="localize english-help"></span>
-                <div>
+                <div class="bigpad">
                     <h4>
-                        <a href="https://discord.com/oauth2/authorize?client_id=451337575366656000&permissions=535582600817&scope=bot%20applications.commands" id="localize-uselessbot-install-button" class="localize">UselessBotを導入する</a><br>
-                        <a href="https://discord.gg/VGNpEjx" id="localize-uselessbot-support" class="localize">UselessBotサポートサーバー</a>
+                        <a href={inviteLink} id="localize-uselessbot-install-button" class="localize">▸ UselessBotを招待する ◂</a><br>
+                        <a href={supportLink} id="localize-uselessbot-support" class="localize">サポートサーバー</a>
                     </h4>
                 </div>
+                <hr>
+                <a href="terms">利用規約</a>
+                <br>
+                <a href="privacy">プライバシーポリシー</a>
             </div>
         </div>
     </div>
@@ -68,7 +78,6 @@ import Top from "../../components/Top.astro";
 
     .english-help {
         display: block;
-        padding-bottom: 2em;
     }
 
     .features {
@@ -79,6 +88,10 @@ import Top from "../../components/Top.astro";
 
     .bot-float-child {
         text-align: left;
+    }
+
+    .bigpad {
+        padding: 2em;
     }
 
     /*pc*/
@@ -96,10 +109,14 @@ import Top from "../../components/Top.astro";
 
         .bot-float-child {
             box-sizing: border-box;
-            width: 50%;
             display: inline;
             float: left;
+            width: 50%;
             padding: 20px;
+        }
+
+        .width-42 {
+            width: 43%;
         }
     }
 
@@ -111,6 +128,10 @@ import Top from "../../components/Top.astro";
             height: 250px;
             object-fit: cover;
             object-position: top center;
+        }
+
+        .width-42 {
+            width: 100%;
         }
 
         .bot-float-child {
