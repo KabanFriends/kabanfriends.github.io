@@ -13,7 +13,8 @@ function start(name) {
         player.config = {
             letterbox: "on",
             autoplay: "on",
-            unmuteOverlay: "hidden"
+            unmuteOverlay: "hidden",
+            preferredRenderer: "webgl"
         };
 
         player.load({ url: url });
