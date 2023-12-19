@@ -1,3 +1,5 @@
+const mobile = new MobileDetect(window.navigator.userAgent);
+
 let player;
 
 function start(name) {
@@ -14,8 +16,12 @@ function start(name) {
             letterbox: "on",
             autoplay: "on",
             unmuteOverlay: "hidden",
-            preferredRenderer: "webgl"
         };
+
+        if (mobile.is("AndroidOS") && !!window.chrome) {
+            console.log("Set preferred renderer to WebGL as the client uses Chrome on Android (https://bugs.chromium.org/p/chromium/issues/detail?id=1510149)")
+            player.config.preferredRenderer = "webgl";
+        }
 
         player.load({ url: url });
     }
