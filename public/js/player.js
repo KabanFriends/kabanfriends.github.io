@@ -1,5 +1,3 @@
-const mobile = new MobileDetect(window.navigator.userAgent);
-
 let player;
 
 function start(name) {
@@ -18,8 +16,8 @@ function start(name) {
             unmuteOverlay: "hidden",
         };
 
-        if (mobile.is("AndroidOS") && !!window.chrome) {
-            console.log("Set preferred renderer to WebGL as the client uses Chrome on Android (https://bugs.chromium.org/p/chromium/issues/detail?id=1510149)")
+        if (navigator.userAgent && /Android/.test(navigator.userAgent) && /Edg/.test(navigator.userAgent)) {
+            console.log("Set preferred renderer to WebGL due to a bug on Chromium Android. See: https://bugs.chromium.org/p/chromium/issues/detail?id=1510149")
             player.config.preferredRenderer = "webgl";
         }
 
