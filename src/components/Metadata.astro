@@ -1,5 +1,5 @@
 ---
-const { title, description } = Astro.props;
+const { title, description, top } = Astro.props;
 ---
 
 <head>
@@ -35,4 +35,6 @@ const { title, description } = Astro.props;
     <!-- Discord Embed End -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    {top ? <meta name="google-site-verification" content="_3Tl91M_oy5osFhzvTsWhOdLS1Q0GlinE10mVTTV9Us" /> : undefined}
 </head>
