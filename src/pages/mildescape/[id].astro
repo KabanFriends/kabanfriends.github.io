@@ -29,7 +29,7 @@ const swf = id === "escape_c" ? "team05re" : id;
     <script src='/js/player.js' is:inline></script>
 
     <MildEscapeMetadata title1={archiveData.games[id]} title2=" / MILD ESCAPE ARCHIVE"/>
-    
+
     <div class="base">
         <div class="content top">
             <div class="horizontal-middle">
@@ -43,11 +43,7 @@ const swf = id === "escape_c" ? "team05re" : id;
                     <h3>{gameTitles[id]}</h3>
                 </div>
                 <div class="game-container">
-                    <div class="game-1">
-                        <div class="game-2">
-                            <div id="ruffle" class="game-3" />
-                        </div>
-                    </div>
+                    <div id="ruffle" class="game" />
                 </div>
                 <div class="sidetext">
                     <a href="javascript:fullscreen()" id="localize-mildescape-fullscreen" class="localize">フルスクリーン表示</a>
@@ -95,30 +91,13 @@ const swf = id === "escape_c" ? "team05re" : id;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        height: 100%;
-    }
-
-    .game-1 {
-        display: flex;
-        flex-direction: column;
         align-items: center;
-        justify-content: center;
         height: 100%;
     }
 
-    .game-2 {
-        width: 100%;
-        aspect-ratio: 1/1;
-        margin: auto;
-        object-fit: contain;
-        max-height: 100%;
-    }
-
-    .game-3 {
-        height: 100%;
-        aspect-ratio: 1/1;
-        margin-left: auto;
-        margin-right: auto;
+    .game {
+        width: 60%;
+        aspect-ratio: 4 / 3;
     }
 
     .sidetext {
